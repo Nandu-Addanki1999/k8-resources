@@ -29,12 +29,12 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: nginx
-  # labels:
-  #   purpose: ebs-static-demo
-  #   project: roboshop
+  labels:
+    purpose: ebs-static-demo
+    project: roboshop
 spec:
-  # nodeSelector:
-  #   topology.kubernetes.io/zone: us-east-1c
+  nodeSelector:
+    topology.kubernetes.io/zone: us-east-1c
   containers:
   - name: nginx
     image: nginx
